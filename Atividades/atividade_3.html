@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h1> Descubra o Numero !!!! </h1>
+
+<script>
+
+	function pulaLinha() {
+		document.write ("<br><br>")
+	}
+
+	function mostra(frase) {
+		document.write (frase)
+		pulaLinha()
+	}
+
+	var numeroPensado = Math.round(Math.random () * 10)
+	console.log (numeroPensado)
+
+	alert ("Tente descubrir o numero que eu pensei.")
+
+	var chute = parseInt(prompt("Digite seu numero na caixa de dialogo."))
+
+	if (chute == numeroPensado) {
+		alert ("Wou, tunt´s tunt´s, você acertou...")
+		mostra("Parabens você acertou o numero.")
+	} else {
+		alert ("Errou!!!!!!!!!")
+		mostra ("Não foi dessa vez que você acertou.")
+	}
+
+	if (chute > numeroPensado) {
+		mostra ("Seu chute foi maior que o numero que eu pensei...")
+	} else {
+		mostra ("Seu chute foi menor que o numero que eu pensei...")
+	}
+
+	mostra ("O numero que eu pensei foi: " + numeroPensado)
+
+	</script>

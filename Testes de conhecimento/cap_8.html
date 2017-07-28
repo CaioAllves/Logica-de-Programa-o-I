@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1> Descubra o numero que eu estou pensando</h1>
+
+<input>
+
+<button>Clique aqui para verificar</button>
+
+<script>
+
+	var numeroPensado = Math.round(Math.random()*10);
+	
+	console.log(numeroPensado);
+	
+	var input = document.querySelector ("input");
+	
+	input.focus();
+
+	function verifica(){
+		if (input.value == numeroPensado) {
+			document.write("Parabens você acertou o numero que eu estava imaginando era: " + numeroPensado);
+		} else {
+
+				alert("Não foi dessa vez... Tente novamente.");
+			
+			}
+
+		input.value = "";
+		input.focus();
+
+	}
+
+	var button = document.querySelector("button");
+
+	button.onclick = verifica;
+
+</script>

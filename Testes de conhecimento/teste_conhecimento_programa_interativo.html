@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write ("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write (frase);
+		pulaLinha();
+	}
+
+	function calculaImc (altura,peso) {
+		return peso/(altura*altura);
+	}
+
+		var nome = prompt ("Informe seu nome: ");
+		var altura = prompt (nome + ", informe sua altura");
+		var peso = prompt (nome + ", informe seu peso");
+
+			var imc = calculaImc (altura,peso);
+
+		var arredondamento = Math.round (imc);
+
+	mostra (nome + ", seu imc é igual a: " + arredondamento);
+
+		if (imc < 18) {
+			mostra (nome + ", seu imc esta abaixo do recomendado.");
+		}
+
+		if (imc > 27) {
+			mostra (nome + ", seu imc esta acima do recomendado.");
+		}
+
+		if (imc > 18 && imc <27) {
+			mostra (nome + ", seu imc esta dentro do nivel recomendado.");
+		}
+
+</script>
+
+<br>
+
+<br>
+
+Para acessar seu e-mail clique <a href="http://hotmail.com">aqui</a>
